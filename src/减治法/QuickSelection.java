@@ -1,43 +1,43 @@
-package ¼õÖÎ·¨;
+package å‡æ²»æ³•;
 
 import tools.ListTools;
 
 public class QuickSelection {
 	/**
-	 * ¸ø¶¨ÎŞĞòÊı×éA[l...r]£¬ÔÚÊı×éÖĞÑ¡³öµÚkĞ¡µÄÔªËØ
+	 * ç»™å®šæ— åºæ•°ç»„A[l...r]ï¼Œåœ¨æ•°ç»„ä¸­é€‰å‡ºç¬¬kå°çš„å…ƒç´ 
 	 * @param k
 	 * @param A
-	 * @param l Êı×éÆäÊµ
-	 * @param r Êı×é³¤¶È
-	 * @return µÚkĞ¡µÄÔªËØ
+	 * @param l æ•°ç»„å…¶å®
+	 * @param r æ•°ç»„é•¿åº¦
+	 * @return ç¬¬kå°çš„å…ƒç´ 
 	 */
 	public static int quickSelection(int k, int[] A, int l, int r) {
 		int s = loumtoPartition(A, l, r);
 		if(s == k) return A[s];
-		else if(k < s) {// Èç¹ûkÔÚ»®·ÖÈ¡¼ä µÄ×ó±ß
+		else if(k < s) {// å¦‚æœkåœ¨åˆ’åˆ†å–é—´ çš„å·¦è¾¹
 			return quickSelection(k, A, l, s - 1);
 		}else {
 			return quickSelection(k, A, s + 1, r);
 		}
 	}
 	/**
-	 * ¶Ô¸ø¶¨A[l..r]Êı×é½øĞĞloumto»®·Ö£¬½«Êı×éÓÃA[l]×÷ÎªÖĞÖá½øĞĞ»®·Ö£¬»®·Ö³ÉÁ½²¿·Ö£¬Ò»±ßĞ¡ÓÚÁíÒ»±ß
-	 * Ê±¼ä: O(r-l)
+	 * å¯¹ç»™å®šA[l..r]æ•°ç»„è¿›è¡Œloumtoåˆ’åˆ†ï¼Œå°†æ•°ç»„ç”¨A[l]ä½œä¸ºä¸­è½´è¿›è¡Œåˆ’åˆ†ï¼Œåˆ’åˆ†æˆä¸¤éƒ¨åˆ†ï¼Œä¸€è¾¹å°äºå¦ä¸€è¾¹
+	 * æ—¶é—´: O(r-l)
 	 * @param A
 	 * @param l
 	 * @param r
-	 * @return Á½²¿·Ö ·Ö½çµãµÄÏÂ±ê
+	 * @return ä¸¤éƒ¨åˆ† åˆ†ç•Œç‚¹çš„ä¸‹æ ‡
 	 */
 	public static int loumtoPartition(int A[], int l, int r) {
-		int k = A[l];// ÓÃA[l]×ö»ù×¼Öµ
-		int s = l;// ×ó±ß²¿·ÖµÄ×îºóÒ»¸öÔªËØµÄÖ¸Õë, ×î¿ªÊ¼Ã»ÓĞÖµ
+		int k = A[l];// ç”¨A[l]åšåŸºå‡†å€¼
+		int s = l;// å·¦è¾¹éƒ¨åˆ†çš„æœ€åä¸€ä¸ªå…ƒç´ çš„æŒ‡é’ˆ, æœ€å¼€å§‹æ²¡æœ‰å€¼
 		for(int j = l + 1; j <= r; j++) {
-			if(A[j] < k) {// Èç¹û A[j]Ğ¡ÓÚ »ù×¼Öµ£¬»®·Öµ½×ó±ß
-				s++;// ×óÇø¼ä¼Ó1
+			if(A[j] < k) {// å¦‚æœ A[j]å°äº åŸºå‡†å€¼ï¼Œåˆ’åˆ†åˆ°å·¦è¾¹
+				s++;// å·¦åŒºé—´åŠ 1
 				ListTools.swap(A, s, j);
 			}
 		}
-		ListTools.swap(A, s, l);// ½«»ù×¼Öµ·Åµ½×óÇø¼ä×îºóÒ»¸ö£¬»®·ÖÍê³É
+		ListTools.swap(A, s, l);// å°†åŸºå‡†å€¼æ”¾åˆ°å·¦åŒºé—´æœ€åä¸€ä¸ªï¼Œåˆ’åˆ†å®Œæˆ
 		return s;
 	}
 	public static void main(String[] args) {

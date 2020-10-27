@@ -1,0 +1,12 @@
+# java binary file
+*.class
+
+
+
+# eclipse work file
+.classpath
+.project
+
+/bin
+
+/.settings

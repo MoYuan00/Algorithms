@@ -1,34 +1,31 @@
-package ¼õÖÎ·¨;
+package å‡æ²»æ³•;
 /**
-    ¶íÊ½³Ë·¨
-    ÀûÓÃ¼õÖÎ·¨ ÆäÖÐµÄ ¼õ³£Òò×ÓµÄË¼Ïë Ã¿´Î½«ÎÊÌâ ¼õÐ¡µ½Ò»°ë
-    Èç ¶ÔÓÚ
-    n*m = (n/2) * (2 *m)  n ÎªÅ¼ÊýÊ±
-    n*m = ((n - 1)/2) * (2 *m) + m n ÎªÆæÊýÊ±
+    å‡æ²»æ³•
+    ä¿„å¼ä¹˜æ³•
+    n*m = (n/2) * (2 *m)  nä¸ºå¶æ•°æ—¶
+    n*m = ((n - 1)/2) * (2 *m) + m  å½“nä¸ºå¥‡æ•°æ—¶
  */
 public class QuicklyMulitiplication{
     /**
-        ¶íÊ½³Ë·¨µÄµÝ¹éÊµÏÖ
-        n,m¾ùÎªÕûÊý
+        ä¿„å¼ä¹˜æ³•
+        n,mï¼Œè®¡ç®—n*m
      */
     static int QuicklyMuli(int n, int m){
         if(n == 0) return 0;
-        if(n == -1) return -m;// µ± nÎª¸ºÊýÊ±£¬ Î»ÒÆÔËËã ¶ÔÓÚ¸ºÊýÀ´Ëµ ÓÉÓÚ×î¸ßÎ»Îª1£¬ÓÀÔ¶Ò²µ½²»ÁË0
-       // ½« >> Ìæ»»³É >>> ÎÞ·ûºÅÓÒÒÆÒ²¿É(¾ÍºÜÆæ¹Ö)£¨×î¸ßÎ»²¹0 £©
-        if((n & 1) == 1) {// Îª ÆæÊý
-            return QuicklyMuli((n - 1) >> 1, m << 1) + m;    
-        } else {// ÎªÅ¼Êý
+        if(n == 1) return m;
+        if(n == -1) return -m;// è¿™é‡Œå¤„ç†è´Ÿæ•°çš„æƒ…å†µ
+        if((n & 1) == 1) {// nä¸ºå¥‡æ•°æ—¶
+            return QuicklyMuli((n - 1) >> 1, m << 1) + m;
+        } else {// nä¸ºå¶æ•°
             return QuicklyMuli(n >> 1, m << 1);
         }
     }
 
     public static void main(String[] args){
         System.out.println(QuicklyMuli(25, 25));
-        System.out.println(QuicklyMuli(1, 5));
-        System.out.println(QuicklyMuli(8, 9));
-        System.out.println(QuicklyMuli(-80, -3));
+        System.out.println(QuicklyMuli(-27, 5));
+        System.out.println(QuicklyMuli(8, -9));
+        System.out.println(QuicklyMuli(-25, -3));
         System.out.println(QuicklyMuli(0, 90));
     }
-
-
 }

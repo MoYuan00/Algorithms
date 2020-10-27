@@ -10,11 +10,11 @@ import java.util.Arrays;
 public class ListTools {
 	
 	/**
-	 * »ñÈ¡ ³¤¶ÈÎªnµÄÒ»¸öÂÒĞòËæ»úÕıÕûÊıÊı×éA
-	 * ×¢Òâ£ºÓĞĞ§Êı¾İ·¶Î§ÎªA[1..n]
-	 * @param n ³¤¶È
-	 * @param floor ×îĞ¡Öµ
-	 * @param cell ×î´óÖµ
+	 * è·å– é•¿åº¦ä¸ºnçš„ä¸€ä¸ªä¹±åºéšæœºæ­£æ•´æ•°æ•°ç»„A
+	 * æ³¨æ„ï¼šæœ‰æ•ˆæ•°æ®èŒƒå›´ä¸ºA[1..n]
+	 * @param n é•¿åº¦
+	 * @param floor æœ€å°å€¼
+	 * @param cell æœ€å¤§å€¼
 	 * @return 
 	 */
 	public static int[] getRandomsNumbers(int n, int floor, int cell) {
@@ -25,7 +25,7 @@ public class ListTools {
 		return a;
 	}
 	/**
-	 * ½»»» Êı×éarray ÏÂ±êÎªaºÍbµÄÔªËØ
+	 * äº¤æ¢ æ•°ç»„array ä¸‹æ ‡ä¸ºaå’Œbçš„å…ƒç´ 
 	 * @param array
 	 * @param a
 	 * @param b
@@ -36,7 +36,7 @@ public class ListTools {
 		array[b] = temp;
 	}
 	/**
-	 * ½«Êı×é×ª»»³É¿ÉÊÓ»¯µÄ×Ö·û´®
+	 * å°†æ•°ç»„è½¬æ¢æˆå¯è§†åŒ–çš„å­—ç¬¦ä¸²
 	 * @param array
 	 * @return
 	 */
@@ -44,19 +44,20 @@ public class ListTools {
 		return Arrays.toString(array);
 	}
 	/**
-	 * ½«Êı×é×ª»»³É¿ÉÊÓ»¯µÄ×Ö·û´®
+	 * å°†æ•°ç»„è½¬æ¢æˆå¯è§†åŒ–çš„å­—ç¬¦ä¸²
 	 * @param array
 	 * @return
 	 */
 	public static String arrayToString(int[][] array) {
 		String s = "";
 		for(int i = 0; i < array.length; i++) {
+
 			s += Arrays.toString(array[i]) + "\n";
 		}
 		return s;
 	}
 	/**
-	 * ·µ»Ø2¸öÊıÖĞµÄ×î´óÖµ
+	 * è¿”å›2ä¸ªæ•°ä¸­çš„æœ€å¤§å€¼
 	 * @param a
 	 * @param b
 	 * @return
@@ -65,7 +66,7 @@ public class ListTools {
 		return a > b ? a : b;
 	}
 	/**
-	 * ·µ»Ø3¸öÊıÖĞµÄ×î´óÖµ
+	 * è¿”å›3ä¸ªæ•°ä¸­çš„æœ€å¤§å€¼
 	 * @param a
 	 * @param b
 	 * @param c
@@ -75,7 +76,7 @@ public class ListTools {
 		return max(a, max(b, c));
 	}
 	/**
-	 * ·µ»Ø2¸öÊıÖĞµÄ×îĞ¡Öµ
+	 * è¿”å›2ä¸ªæ•°ä¸­çš„æœ€å°å€¼
 	 * @param a
 	 * @param b
 	 * @return
@@ -84,7 +85,7 @@ public class ListTools {
 		return a > b ? b : a;
 	}
 	/**
-	 * ·µ»Ø3¸öÊıÖĞµÄ×îĞ¡Öµ
+	 * è¿”å›3ä¸ªæ•°ä¸­çš„æœ€å°å€¼
 	 * @param a
 	 * @param b
 	 * @param c

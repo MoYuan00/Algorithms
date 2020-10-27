@@ -1,21 +1,21 @@
-package ÂùÁ¦·¨;
+package è›®åŠ›æ³•;
 
 import java.util.Arrays;
 
 import tools.ListTools;
 
 /**
- * Ñ¡ÔñÅÅĞò
- * ¶ÔÓÚn¸öÔªËØµÄA[1..n]½øĞĞ£¬·Ç½µĞòÅÅĞò£¬
- * Ã¿´Î½«µÚiĞ¡µÄÔªËØ·Åµ½µÚi¸ö£¬i = 1.¡£¡£n-1
- * Ö±µ½i= n-1½áÊø
+ * é€‰æ‹©æ’åº
+ * å¯¹äºnä¸ªå…ƒç´ çš„A[1..n]è¿›è¡Œï¼Œéé™åºæ’åºï¼Œ
+ * æ¯æ¬¡å°†ç¬¬iå°çš„å…ƒç´ æ”¾åˆ°ç¬¬iä¸ªï¼Œi = 1.ã€‚ã€‚n-1
+ * ç›´åˆ°i= n-1ç»“æŸ
  * @author Rnti
  *
  */
 public class SelectionSort {
 	/**
-	 * Ñ¡ÔñÅÅĞò
-	 * @param a ´ıÅÅĞòÊı×éA[1...n]
+	 * é€‰æ‹©æ’åº
+	 * @param a å¾…æ’åºæ•°ç»„A[1...n]
 	 */
 	public static void selectionSort(int a[]) {
 		int n = a.length - 1;
@@ -31,7 +31,7 @@ public class SelectionSort {
 		System.out.println(ListTools.arrayToString(a));
 		selectionSort(a);
 		System.out.println(ListTools.arrayToString(a));
-		// ¼ìÑéËã·¨ÕıÈ·ĞÔ
+		// æ£€éªŒç®—æ³•æ­£ç¡®æ€§
 		Arrays.sort(a, 1, a.length);
 		System.out.println(ListTools.arrayToString(a));
 	}

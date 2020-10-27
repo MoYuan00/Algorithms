@@ -1,7 +1,7 @@
-package ·ÖÖÎ·¨;
+package åˆ†æ²»æ³•;
 /**
  * 
- * ¿ìËÙÅÅĞò
+ * å¿«é€Ÿæ’åº
  */
 public class QuickSort{
     public static void swap(int[] array, int a, int b){
@@ -10,11 +10,11 @@ public class QuickSort{
         array[b] = temp;
     }
     /**
-     * »®·Ö
-     * ·µ»Ø»®·ÖµãµÄÖµ
+     * åˆ’åˆ†
+     * è¿”å›åˆ’åˆ†ç‚¹çš„å€¼
      */
     public static int partion(int[] array, int l, int r) {
-        int k = array[l];// ÒÔµÚÒ»¸öÎª»ù×¼Öµ
+        int k = array[l];// ä»¥ç¬¬ä¸€ä¸ªä¸ºåŸºå‡†å€¼
         int i = l; int j = r;
         while(i < j){
             while(array[j] >= k && i < j) j--;

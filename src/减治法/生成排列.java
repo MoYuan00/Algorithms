@@ -1,46 +1,46 @@
-package ¼õÖÎ·¨;
+package å‡æ²»æ³•;
 
 import tools.ListTools;
 
-public class Éú³ÉÅÅÁĞ {
+public class ç”Ÿæˆæ’åˆ— {
 	
 	/**
-	 * ´ÓºóÏòÇ°Éú³ÉÅÅÁĞ
-	 * ÄæÏò¼õÖÎ·¨
+	 * ä»åå‘å‰ç”Ÿæˆæ’åˆ—
+	 * é€†å‘å‡æ²»æ³•
 	 */
 	static int count = 0;
-	public static void ¼õÖÎ·¨Éú³ÉÅÅÁĞ(int n, int k, int A[]){
+	public static void å‡æ²»æ³•ç”Ÿæˆæ’åˆ—(int n, int k, int A[]){
 		if(n == k) {
 			count++;
 			return;
 		}
-		for(int i = k; i <= n; i++) {//·´Ïò ¶ÔÓÚk-nµÄÅÅÁĞ µÚ k¸öÔªËØ£¬¿ÉÒÔ·Åk...nÖĞ£¨»áÉú³ÉÒ»¸ö°´×ÖµäĞòµÄÅÅÁĞ£¬ÒòÎª×îºóÃæµÄÏÈÉú³É£© ÏÈÉú³É123,132 ..
+		for(int i = k; i <= n; i++) {//åå‘ å¯¹äºk-nçš„æ’åˆ— ç¬¬ kä¸ªå…ƒç´ ï¼Œå¯ä»¥æ”¾k...nä¸­ï¼ˆä¼šç”Ÿæˆä¸€ä¸ªæŒ‰å­—å…¸åºçš„æ’åˆ—ï¼Œå› ä¸ºæœ€åé¢çš„å…ˆç”Ÿæˆï¼‰ å…ˆç”Ÿæˆ123,132 ..
 			ListTools.swap(A, i, k);
-			¼õÖÎ·¨Éú³ÉÅÅÁĞ(n, k + 1, A);
+			å‡æ²»æ³•ç”Ÿæˆæ’åˆ—(n, k + 1, A);
 			ListTools.swap(A, k, i);
 		}
 	}
 	/**
-	 * ´ÓÇ°ÏòºóÉú³ÉÅÅÁĞ
-	 * ¼õÖÎ·¨
+	 * ä»å‰å‘åç”Ÿæˆæ’åˆ—
+	 * å‡æ²»æ³•
 	 */
 	static int count2 = 0;
-	public static void ¼õÖÎ·¨Éú³ÉÅÅÁĞ2(int n, int A[]){
+	public static void å‡æ²»æ³•ç”Ÿæˆæ’åˆ—2(int n, int A[]){
 		if(n == 1) {
 			count2++;
 			return;
 		}
-		for(int i = 1; i <= n; i++) {// ¶ÔÓÚ1-nµÄÅÅÁĞ ¶ÔÓÚµÚn¸öÔªËØ£¬ ¿ÉÒÔ·Åµ½ 1....nÉÏ
+		for(int i = 1; i <= n; i++) {// å¯¹äº1-nçš„æ’åˆ— å¯¹äºç¬¬nä¸ªå…ƒç´ ï¼Œ å¯ä»¥æ”¾åˆ° 1....nä¸Š
 			ListTools.swap(A, i, n);
-			¼õÖÎ·¨Éú³ÉÅÅÁĞ2(n - 1, A);
+			å‡æ²»æ³•ç”Ÿæˆæ’åˆ—2(n - 1, A);
 			ListTools.swap(A, n, i);
 		}
 	}
 	
 	static int count3 = 0;
 	/**
-	 * Heap Éú³ÉÅÅÁĞËã·¨
-	 * Ä¿Ç°ÔÚ3ÕßÖĞÔËĞĞ×î¿ì£¨²»ÓÃ»ØËİ£©
+	 * Heap ç”Ÿæˆæ’åˆ—ç®—æ³•
+	 * ç›®å‰åœ¨3è€…ä¸­è¿è¡Œæœ€å¿«ï¼ˆä¸ç”¨å›æº¯ï¼‰
 	 */
 	public static void HeapPermute(int n, int A[]) {
 		if(n == 1) {
@@ -49,9 +49,9 @@ public class Éú³ÉÅÅÁĞ {
 		}else {
 			for(int i = 1; i <= n; i++) {
 				HeapPermute(n - 1, A);
-				if((n&1) == 1) // Èç¹ûÊÇÆæÊı
+				if((n&1) == 1) // å¦‚æœæ˜¯å¥‡æ•°
 					ListTools.swap(A, 1, n);
-				else 			// Èç¹ûÊÇÅ¼Êı
+				else 			// å¦‚æœæ˜¯å¶æ•°
 					ListTools.swap(A, i, n);
 			}
 		}
@@ -62,22 +62,22 @@ public class Éú³ÉÅÅÁĞ {
 		for(int i = 1; i <= n; i ++) {
 			A[i] = i;
 		}
-		// n = 12Ê± time=3318£¬3098£¬3312
+		// n = 12æ—¶ time=3318ï¼Œ3098ï¼Œ3312
 //		long time1 = System.currentTimeMillis();
-//		¼õÖÎ·¨Éú³ÉÅÅÁĞ(n, 1, A);
-//		System.out.println("ÅÅÁĞ¸öÊı" + count);
+//		å‡æ²»æ³•ç”Ÿæˆæ’åˆ—(n, 1, A);
+//		System.out.println("æ’åˆ—ä¸ªæ•°" + count);
 //		System.out.println((System.currentTimeMillis() - time1));
 		
-		// n = 12Ê± time=3080£¬3033£¬3083
+		// n = 12æ—¶ time=3080ï¼Œ3033ï¼Œ3083
 //		long time2 = System.currentTimeMillis();
-//		¼õÖÎ·¨Éú³ÉÅÅÁĞ2(n, A);
-//		System.out.println("ÅÅÁĞ¸öÊı" + count2);
+//		å‡æ²»æ³•ç”Ÿæˆæ’åˆ—2(n, A);
+//		System.out.println("æ’åˆ—ä¸ªæ•°" + count2);
 //		System.out.println((System.currentTimeMillis() - time2));
 		
-		// n = 12Ê± time=2658£¬2744£¬2736£¬2690
+		// n = 12æ—¶ time=2658ï¼Œ2744ï¼Œ2736ï¼Œ2690
 //		long time3 = System.currentTimeMillis();
 //		HeapPermute(n, A);
-//		System.out.println("ÅÅÁĞ¸öÊı" + count3);
+//		System.out.println("æ’åˆ—ä¸ªæ•°" + count3);
 //		System.out.println((System.currentTimeMillis() - time3));
 	}
 }

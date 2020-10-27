@@ -1,17 +1,17 @@
-package ¼õÖÎ·¨;
+package å‡æ²»æ³•;
 /**
  * 
- * Shellsort£¨Ï£¶ûÅÅÐò£©
- * ²åÈëÅÅÐòµÄÓÅ»¯
- * ²åÈëÅÅÐò µÄ×îÓÅ¸´ÔÓ¶ÈÎªO(n)£¬£¨µ±Êý¾ÝÓÐÐòÊ±£©£¬ÇÒµ±Êý¾Ý»ù±¾ÓÐÐòÊ±£¬¸´ÔÓ¶È»áÓÉn·½Ç÷Ïòn
- * ShellÅÅÐòÊÇ ½øÐÐÁË¶à´Î²åÈëÅÅÐò£¬Ã¿´Î²åÈëÅÅÐò¹ýºó ÐÂÐòÁÐ¶¼»á±äµÃ¸üÓÐÐò
- * ÆäË¼ÏëÊÇ Ñ¡¶¨Åµ¸É²½³¤ÐòÁÐ£¨ÒÔ1½áÎ²¼´¿É ×îÓÅ²½³¤Îª121£¬40£¬13£¬4£¬1£©£¬
- * Ã¿´Î¶ÔÕâÐ©²½³¤µÄ×ÓÐòÁÐ½øÐÐ²åÈëÅÅÐò
+ * Shellsortï¼ˆå¸Œå°”æŽ’åºï¼‰
+ * æ’å…¥æŽ’åºçš„ä¼˜åŒ–
+ * æ’å…¥æŽ’åº çš„æœ€ä¼˜å¤æ‚åº¦ä¸ºO(n)ï¼Œï¼ˆå½“æ•°æ®æœ‰åºæ—¶ï¼‰ï¼Œä¸”å½“æ•°æ®åŸºæœ¬æœ‰åºæ—¶ï¼Œå¤æ‚åº¦ä¼šç”±næ–¹è¶‹å‘n
+ * ShellæŽ’åºæ˜¯ è¿›è¡Œäº†å¤šæ¬¡æ’å…¥æŽ’åºï¼Œæ¯æ¬¡æ’å…¥æŽ’åºè¿‡åŽ æ–°åºåˆ—éƒ½ä¼šå˜å¾—æ›´æœ‰åº
+ * å…¶æ€æƒ³æ˜¯ é€‰å®šè¯ºå¹²æ­¥é•¿åºåˆ—ï¼ˆä»¥1ç»“å°¾å³å¯ æœ€ä¼˜æ­¥é•¿ä¸º121ï¼Œ40ï¼Œ13ï¼Œ4ï¼Œ1ï¼‰ï¼Œ
+ * æ¯æ¬¡å¯¹è¿™äº›æ­¥é•¿çš„å­åºåˆ—è¿›è¡Œæ’å…¥æŽ’åº
  */
 public class Shellsort{
     /**
-     * ¶Ô¸ø¶¨²½³¤½øÐÐ²åÈëÅÅÐò
-     * d:²½³¤ n:Êý×é³¤¶È£¬array:Êý×é
+     * å¯¹ç»™å®šæ­¥é•¿è¿›è¡Œæ’å…¥æŽ’åº
+     * d:æ­¥é•¿ n:æ•°ç»„é•¿åº¦ï¼Œarray:æ•°ç»„
      */
     public static void stepInsertionSort(int d, int n, int[]array) {
         for(int i = d, j = 0; i <= n; i += d){
@@ -25,7 +25,7 @@ public class Shellsort{
         }
     }
     /**
-     * Ï£¶ûÅÅÐò
+     * å¸Œå°”æŽ’åº
      */
     public static void shellsort(int[] array) {
         int n = array.length - 1;

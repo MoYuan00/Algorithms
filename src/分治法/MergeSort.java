@@ -1,4 +1,4 @@
-package ·ÖÖÎ·¨;
+package åˆ†æ²»æ³•;
 /**
  *  merge sort
  */
@@ -34,12 +34,12 @@ public class MergeSort{
      * 
      */
     public static void mergeSort(int array[], int tempArray[], int l, int r) {
-        if(l < r){
-            int m = ((l + r) >> 1);
-            mergeSort(array, tempArray, l, m);
-            mergeSort(array, tempArray, m + 1, r); // rigth start with m+1
-            merge(array, tempArray, l, m, r);
-        }
+	    if(l < r){
+	            int m = ((l + r) >> 1);
+	            mergeSort(array, tempArray, l, m);
+	            mergeSort(array, tempArray, m + 1, r); // rigth start with m+1
+	            merge(array, tempArray, l, m, r);
+	        }
     }
     public static void main(String[] args) {
         int len = 333345;
@@ -57,5 +57,4 @@ public class MergeSort{
         //     System.out.print(array[i] + ",");// = i * 17 % 31;
         // }
     }
-
 }

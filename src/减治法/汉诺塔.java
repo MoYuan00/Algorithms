@@ -1,25 +1,25 @@
-package ¼õÖÎ·¨;
+package å‡æ²»æ³•;
 
 /**
- * ÃèÊö£¬ÓĞ A B C3¸öÖù×Ó£¬AÉÏ ·Å×Ån¸öÅÌ×Ó£¬µ×ÏÂµÄÅÌ×Ó´óÓÚÉÏÃæ£¬
- * ÈçºÎ½«AÉÏµÄÅÌ×ÓÒÆ¶¯µ½C£¬ÇÒÒÆ¶¯¹ı³ÌºÍ½á¹ûÊ¼ÖÕ±£Ö¤Ğ¡ÅÌ×ÓÔÚ´óÅÌÉÏ·½
- * ¼õÖÎ·¨£¬
- * ¼ÙÉè¶ÔÓÚn²ãµÄººÅµËş£¬Ç°n-1²ãÒÑ¾­´Ó A·Åµ½ÁËB £¨ C¸¨Öú £©
- * ÄÇÃ´½ÓÏÂÀ´ Ö»Ğè½«A[n] ´Ó A ·Åµ½ C 
- * È»ºó½« Ç° n-1 ²ã ´Ó B ·Åµ½ C ¼´¿É £¨A ¸¨Öú £©
+ * æè¿°ï¼Œæœ‰ A B C3ä¸ªæŸ±å­ï¼ŒAä¸Š æ”¾ç€nä¸ªç›˜å­ï¼Œåº•ä¸‹çš„ç›˜å­å¤§äºä¸Šé¢ï¼Œ
+ * å¦‚ä½•å°†Aä¸Šçš„ç›˜å­ç§»åŠ¨åˆ°Cï¼Œä¸”ç§»åŠ¨è¿‡ç¨‹å’Œç»“æœå§‹ç»ˆä¿è¯å°ç›˜å­åœ¨å¤§ç›˜ä¸Šæ–¹
+ * å‡æ²»æ³•ï¼Œ
+ * å‡è®¾å¯¹äºnå±‚çš„æ±‰è¯ºå¡”ï¼Œå‰n-1å±‚å·²ç»ä» Aæ”¾åˆ°äº†B ï¼ˆ Cè¾…åŠ© ï¼‰
+ * é‚£ä¹ˆæ¥ä¸‹æ¥ åªéœ€å°†A[n] ä» A æ”¾åˆ° C 
+ * ç„¶åå°† å‰ n-1 å±‚ ä» B æ”¾åˆ° C å³å¯ ï¼ˆA è¾…åŠ© ï¼‰
  * @author Rnti
  *
  */
-public class ººÅµËş {
+public class æ±‰è¯ºå¡” {
 	static int count = 0;// reword step of move in put
 	public static void func(int n, char source, char temp, char target) {
 		if(n == 0) {
 			return;
 		}
-		// ½« Ç° n-1 ²ãÈ«²¿ ÓÉ a move to b, c is used temp
+		// å°† å‰ n-1 å±‚å…¨éƒ¨ ç”± a move to b, c is used temp
 		func(n - 1, source, target, temp);
 		count ++;
-		System.out.println("½«" + n + " ´Ó" + source +"·Åµ½" + target);
+		System.out.println("å°†" + n + " ä»" + source +"æ”¾åˆ°" + target);
 		// move 1 to n-1 from B to C, A is used temp
 		func(n - 1, temp, source, target);
 		
@@ -27,6 +27,6 @@ public class ººÅµËş {
 	
 	public static void main(String[] args) {
 		func(1, 'A', 'B', 'C');
-		System.out.println("¹²Ğè:" + count + "´Î");
+		System.out.println("å…±éœ€:" + count + "æ¬¡");
 	}
 }

@@ -1,21 +1,21 @@
-package ¼õÖÎ·¨;
+package å‡æ²»æ³•;
 
 import java.util.Arrays;
 
 import tools.ListTools;
-import ·ÖÖÎ·¨.MergeSort;
-import ·ÖÖÎ·¨.QuickSort;
+import åˆ†æ²»æ³•.MergeSort;
+import åˆ†æ²»æ³•.QuickSort;
 
 /**
- * ²åÖµ²éÕÒ
+ * æ’å€¼æŸ¥æ‰¾
  * @author Rnti
  *
  */
 public class InsertSelection {
 	
 	/**
-	 * »ñÈ¡ ÏÂÒ»¸ö¿ÉÄÜµÄÏÂ±ê, ¿ÉÄÜ»á³¬¹ıÇø¼äÖµ£¨l..r£©
-	 * ÕâÀï¼ÙÉèA[l...r]µÄÔªËØÊÇÏßĞÔÓĞĞòµÄ
+	 * è·å– ä¸‹ä¸€ä¸ªå¯èƒ½çš„ä¸‹æ ‡, å¯èƒ½ä¼šè¶…è¿‡åŒºé—´å€¼ï¼ˆl..rï¼‰
+	 * è¿™é‡Œå‡è®¾A[l...r]çš„å…ƒç´ æ˜¯çº¿æ€§æœ‰åºçš„
 	 * @param v
 	 * @param A
 	 * @param l
@@ -26,7 +26,7 @@ public class InsertSelection {
 		return (int)(((double)((r - l)) / (double)(A[r] - A[l])) * (v - A[l]) + l);
 	}
 	/**
-	 * ¶Ô·Ç½µĞòÊı×é A[l...r]½øĞĞ²éÕÒ£¬²éÕÒÖµÎªvµÄÏÂ±ê£¬Èç¹ûÓĞ·µ»Ø£¬Ã»ÓĞ·µ»Ø-1
+	 * å¯¹éé™åºæ•°ç»„ A[l...r]è¿›è¡ŒæŸ¥æ‰¾ï¼ŒæŸ¥æ‰¾å€¼ä¸ºvçš„ä¸‹æ ‡ï¼Œå¦‚æœæœ‰è¿”å›ï¼Œæ²¡æœ‰è¿”å›-1
 	 * @param k
 	 * @param A
 	 * @param l
@@ -34,27 +34,27 @@ public class InsertSelection {
 	 * @return
 	 */
 	public static int insertSelection(int v, int A[], int l, int r) {
-		if(l > r) return -1;// Êı×éAÖĞ²»°üº¬v
+		if(l > r) return -1;// æ•°ç»„Aä¸­ä¸åŒ…å«v
 		int x = getIndex(v, A, l, r);
-		if(x < l || x > r) return -1;// ·ÀÖ¹x³¬¹ıÇø¼ä£¬Èç¹û³¬¹ıÇø¼ä±íÃæÃ»ÓĞ Õâ¸öÖµ
+		if(x < l || x > r) return -1;// é˜²æ­¢xè¶…è¿‡åŒºé—´ï¼Œå¦‚æœè¶…è¿‡åŒºé—´è¡¨é¢æ²¡æœ‰ è¿™ä¸ªå€¼
 		if(A[x] == v) return x;
-		if(v < A[x]) // Èç¹ûx´óÁË£¬ ±íÃævÖµÔÚx×ó±ß
+		if(v < A[x]) // å¦‚æœxå¤§äº†ï¼Œ è¡¨é¢vå€¼åœ¨xå·¦è¾¹
 			return insertSelection(v, A, l, x - 1);
-		else // Èç¹ûxĞ¡ÁË£¬ ±íÃævÖµÔÚxÓÒ±ß
+		else // å¦‚æœxå°äº†ï¼Œ è¡¨é¢vå€¼åœ¨xå³è¾¹
 			return insertSelection(v, A, x + 1, r);
 	}
 	
 	public static void main(String[] args) {
 		int n = 441100;
 		int A[] = ListTools.getRandomsNumbers(n, 3, 46431);
-		QuickSort.quickSort(A, 1, n);// ÅÅĞò
+		QuickSort.quickSort(A, 1, n);// æ’åº
 		for(int k = 323; k <= n; ) {
 			int x = insertSelection(k, A, 1, n);
 			if(x > 0)
-				System.out.println("x: " + x + " A[x]:" + A[x]);// ²éÕÒ
+				System.out.println("x: " + x + " A[x]:" + A[x]);// æŸ¥æ‰¾
 			int y = Arrays.binarySearch(A, k);
 			if(y > 0)
-				System.out.println("y: " + y + " A[y]:" + A[y]);// ²éÕÒ
+				System.out.println("y: " + y + " A[y]:" + A[y]);// æŸ¥æ‰¾
 			System.out.println("----");
 			k = k + k/2;
 		}
